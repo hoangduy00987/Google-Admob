@@ -12,14 +12,14 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- ====== PHẦN ĐẦU: Nhãn Ad + Nút info + Nút X ====== -->
+
         <LinearLayout
             android:id="@+id/ad_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:layout_marginBottom="4dp">
+            >
 
             <!-- Nhãn Ad -->
             <TextView
@@ -32,7 +32,7 @@
                 android:textSize="12sp"
                 android:paddingHorizontal="4dp" />
 
-            <!-- AdChoices (tuân thủ Google) -->
+
             <com.google.android.gms.ads.nativead.AdChoicesView
                 android:id="@+id/ad_choices_container"
                 android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
                 android:layout_marginStart="6dp"
                 android:layout_weight="1" />
 
-            <!-- Nút xem chi tiết -->
+
             <ImageView
                 android:id="@+id/ad_view_detail"
                 android:layout_width="18dp"
@@ -49,7 +49,7 @@
                 android:layout_marginEnd="8dp"
                 android:contentDescription="View ad details" />
 
-            <!-- Nút tắt quảng cáo -->
+
             <ImageView
                 android:id="@+id/ad_close"
                 android:layout_width="18dp"
@@ -58,14 +58,14 @@
                 android:contentDescription="Close ad" />
         </LinearLayout>
 
-        <!-- ====== PHẦN NỘI DUNG QUẢNG CÁO ====== -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <!-- Icon ứng dụng -->
+
             <ImageView
                 android:id="@+id/ad_icon"
                 android:layout_width="40dp"
@@ -73,7 +73,7 @@
                 android:scaleType="centerCrop"
                 android:layout_marginEnd="8dp" />
 
-            <!-- Tiêu đề + mô tả -->
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Ảnh hoặc video quảng cáo -->
+
         <com.google.android.gms.ads.nativead.MediaView
             android:id="@+id/ad_media"
             android:layout_width="match_parent"
@@ -110,7 +110,7 @@
             android:layout_marginBottom="8dp"
             android:scaleType="centerCrop" />
 
-        <!-- Nút cài đặt -->
+
         <Button
             android:id="@+id/ad_call_to_action"
             android:layout_width="match_parent"

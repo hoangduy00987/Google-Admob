@@ -1,25 +1,30 @@
 package com.example.practice_admob_sdk
 
-import android.app.NativeActivity
+import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.ads.AdLoader
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.nativead.NativeAdView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-//        setContentView(R.layout.splash)
+        setContentView(R.layout.activity_main)
+        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
+        // chạy từ 1 - 100
+        val animation = ObjectAnimator.ofInt(progressBar, "progress", 0, 100)
+        animation.duration = 3000
+        animation.start()
+
+        animation.addUpdateListener { animator ->
+            val progress = animator.animatedValue as Int
+            if(progress == 100){
+                val  intent = Intent(this, IntersitialAdActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
 
     }
 }

@@ -7,240 +7,43 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ScrollView
+    <!-- Tiêu đề -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="8dp"
+        android:background="#F0F1F8">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Language"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/ivTick"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/check"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- RecyclerView thay cho ScrollView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerLanguages"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#F0F1F8"
-        android:padding="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:paddingTop="12dp"
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="20dp"
-                android:paddingHorizontal="16dp"
-
-                >
-            <TextView
-                android:id="@+id/tvTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Language"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:paddingLeft="110dp"
-                />
-
-                <ImageView
-                    android:id="@+id/ivTick"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/check"
-                    android:visibility="gone" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:dividerPadding="8dp">
-
-                <!--India-->
-                <LinearLayout
-                    android:id="@+id/india"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp"
-                    android:layout_marginBottom="10dp"
-
-                    android:background="@drawable/rounded_background">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/india"
-                        android:contentDescription="Hindi"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hindi"
-                        android:textSize="20sp"
-                        android:textColor="#000000"
-                        android:layout_marginStart="16dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <!-- Spanish-->
-                <LinearLayout
-                    android:id="@+id/spain"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_background">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/spain"
-                        android:contentDescription="Spanish"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Spanish"
-                        android:textSize="20sp"
-                        android:textColor="#000000"
-                        android:layout_marginStart="16dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <!--French-->
-                <LinearLayout
-                    android:id="@+id/france"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_background">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/french"
-                        android:contentDescription="French"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="French"
-                        android:textSize="20sp"
-                        android:textColor="#000000"
-                        android:layout_marginStart="16dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <!--America-->
-                <LinearLayout
-                    android:id="@+id/america"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_background">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/america"
-                        android:contentDescription="English"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="English"
-                        android:textSize="20sp"
-                        android:textColor="#000000"
-                        android:layout_marginStart="16dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <!--Portuguese-->
-                <LinearLayout
-                    android:id="@+id/portugal"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_background">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/portuguese"
-                        android:contentDescription="Portuguese"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Portuguese"
-                        android:textSize="20sp"
-                        android:textColor="#000000"
-                        android:layout_marginStart="16dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <!--Korean-->
-                <LinearLayout
-                    android:id="@+id/korea"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_background">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/korean"
-                        android:contentDescription="Korean"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Korean"
-                        android:textSize="20sp"
-                        android:textColor="#000000"
-                        android:layout_marginStart="16dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-                <!--Japanese-->
-                <LinearLayout
-                    android:id="@+id/japan"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:gravity="center_vertical"
-                    android:paddingHorizontal="16dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/rounded_background">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/japanese"
-                        android:contentDescription="Japanese"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Japanese"
-                        android:textSize="20sp"
-                        android:textColor="#000000"
-                        android:layout_marginStart="16dp"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        android:padding="16dp"/>
 
     <LinearLayout
         android:id="@+id/nativeAdContainer"
@@ -249,7 +52,6 @@
         android:orientation="vertical"
         android:padding="8dp"
         android:gravity="center_horizontal"
-        android:visibility="gone"
-        android:layout_marginBottom="12dp"
-        />
+        android:layout_marginBottom="35dp"
+        android:visibility="gone" />
 </LinearLayout>

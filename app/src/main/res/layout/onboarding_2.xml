@@ -11,8 +11,8 @@
     <!-- Image lớn phía trên -->
     <ImageView
         android:id="@+id/onboardingImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:src="@drawable/onboarding2_image"
         android:scaleType="centerCrop"
         app:layout_constraintTop_toTopOf="parent"
