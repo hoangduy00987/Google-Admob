@@ -3,88 +3,97 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".OnBoarding1Activity"
-    android:background="#F0F1F8"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".OnBoarding1Fragment"
+    android:elevation="0dp"
+    android:outlineProvider="none"
+    android:clipToOutline="false"
+
+    >
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/onboarding1_image"
-
-            />
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/onboarding1_image" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="335dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:layout_marginTop="12dp">
 
-        >
         <TextView
             android:id="@+id/tvTitle"
-            android:layout_width="335dp"
-            android:layout_height="50dp"
-            android:text="Welcome to the world of\n languages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the world of\nlanguages"
             android:textSize="20sp"
             android:textColor="#111213"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginBottom="6dp"
-            />
+            android:layout_marginBottom="8dp" />
+
         <TextView
             android:id="@+id/btNext"
-            android:layout_width="335dp"
-            android:layout_height="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Next"
             android:textColor="#3D4CFB"
             android:textStyle="bold"
             android:textSize="14sp"
             android:gravity="center"
-            android:layout_marginBottom="6dp"
-            />
+            android:layout_marginBottom="8dp" />
+
         <LinearLayout
             android:id="@+id/indicatorLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            >
+            android:layout_marginBottom="8dp">
+
             <View
                 android:id="@+id/view1"
                 android:layout_width="30dp"
                 android:layout_height="8dp"
                 android:layout_margin="4dp"
-                android:background="@drawable/progress_active_shape"
-                />
+                android:background="@drawable/progress_active_shape" />
+
             <View
                 android:id="@+id/view2"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
                 android:layout_margin="4dp"
-                android:background="@drawable/progress_inactive_dot"
-                />
+                android:background="@drawable/progress_inactive_dot" />
+
             <View
                 android:id="@+id/view3"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
                 android:layout_margin="4dp"
-                android:background="@drawable/progress_inactive_dot"
-                />
-
+                android:background="@drawable/progress_inactive_dot" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/nativeAdContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
-        android:padding="8dp"
-        android:gravity="center_horizontal"
-        android:visibility="gone"/>
-
+        android:background="#FFFFFF"
+        android:visibility="gone" />
 
 </LinearLayout>

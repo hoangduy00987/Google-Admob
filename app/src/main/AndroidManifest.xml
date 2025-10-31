@@ -15,10 +15,9 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713"/>
         <activity android:name=".IntersitialAdActivity" />
-        <activity android:name=".OnBoarding1Activity" />
+        <activity android:name=".OnboardingActivity" />
         <activity android:name=".NativeFullActivity" />
-        <activity android:name=".OnBoarding2Activity" />
-        <activity android:name=".OnBoarding3Activity" />
+        <activity android:name=".OnBoarding3Fragment" />
         <activity android:name=".LanguageActivity" />
 
 

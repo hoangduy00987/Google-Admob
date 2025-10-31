@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0F1F8"
-    tools:context=".OnBoarding2Activity">
+    tools:context=".OnBoarding2Fragment">
 
     <!-- Image lớn phía trên -->
     <ImageView

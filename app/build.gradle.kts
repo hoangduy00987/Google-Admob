@@ -37,6 +37,7 @@ android {
 
 dependencies {
     implementation("com.google.android.gms:play-services-ads:24.7.0")
+    implementation("androidx.fragment:fragment-ktx:1.8.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

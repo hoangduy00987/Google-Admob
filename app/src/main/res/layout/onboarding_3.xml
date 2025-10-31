@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".OnBoarding3Activity"
+    tools:context=".OnBoarding3Fragment"
     android:background="#F0F1F8"
     android:orientation="vertical">
     <LinearLayout
@@ -79,11 +79,11 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:paddingTop="50dp"
         android:id="@+id/nativeAdContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="8dp"
         android:gravity="center_horizontal"
         android:visibility="gone"/>
 
